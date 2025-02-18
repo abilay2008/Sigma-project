@@ -29,29 +29,42 @@
             margin: 5px 0;
         }
     </style>
+    <script>
+        function toggleLanguage() {
+            const elements = document.querySelectorAll("[data-en]");
+            elements.forEach(el => {
+                const temp = el.innerText;
+                el.innerText = el.getAttribute("data-en");
+                el.setAttribute("data-en", temp);
+            });
+        }
+    </script>
 </head>
 <body>
-    <h1>profile of sigma male almasuly abilay 10C nagibator tigr lev nash sloniara 3000 neo</h1>
+    <h1 data-en="Profile of sigma male almasuly abilay 10C nagibator tigr lev nash sloniara 3000 neo">
+        Профиль сигма мэла Алмасулы Абылай 10С нагибатор тигр лев наш слоняра 3000 нео
+    </h1>
+    <button onclick="toggleLanguage()">Switch Language / Сменить язык</button>
     <img src="Sukhoi_Design_Bureau,_054,_Sukhoi_Su-57_(49581303977).jpg" width="300"/>
     
     <table>
         <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Email</th>
+            <th data-en="Name">Имя</th>
+            <th data-en="Age">Возраст</th>
+            <th data-en="Email">Почта</th>
         </tr>
         <tr>
-            <td>Abilay lev tiger</td>
-            <td>16</td>
-            <td>batman@gmail.com</td>
+            <td data-en="Abilay lev tiger">Абылай лев тигр</td>
+            <td data-en="16">16</td>
+            <td data-en="batman@gmail.com">batman@gmail.com</td>
         </tr>
     </table>
     
     <ul>
-        <li>Sigmaboy</li>
-        <li>Naiman</li>
-        <li>top1kazakhstana</li>
-        <li>got5inEnglish</li>
+        <li data-en="Sigmaboy">Сигмабой</li>
+        <li data-en="Naiman">Найман</li>
+        <li data-en="top1kazakhstana">топ1казахстана</li>
+        <li data-en="got5inEnglish">получил 5 по английскому</li>
     </ul>
 </body>
 </html>
