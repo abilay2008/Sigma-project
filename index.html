@@ -4,102 +4,70 @@
     <title>My Profile</title>
     <style>
         body {
-            background-color: #f8d7da;
+            background-color: #f8d7da; /* Нежный кремово-розовый фон */
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
         }
-        h1 {
-            font-size: 24px;
-        }
-        table {
-            margin: auto;
-            border-collapse: collapse;
-            width: 50%;
-        }
-        th, td {
-            border: 1px solid white;
-            padding: 10px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 5px 0;
+        .button {
+            background-color: #ff6b81;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px;
+            cursor: pointer;
+            border-radius: 8px;
         }
     </style>
+    <script>
+        const languages = {
+            en: {
+                title: "Profile of Sigma Male Almasuly Abilay",
+                goToGallery: "Go to Gallery"
+            },
+            ru: {
+                title: "Профиль Сигма Мейл Алмасулы Абилая",
+                goToGallery: "Перейти в галерею"
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.getElementById("profile-title").innerText = languages[lang].title;
+            document.getElementById("gallery-button").innerText = languages[lang].goToGallery;
+        }
+    </script>
 </head>
 <body>
     <button onclick="changeLanguage('en')">English</button>
     <button onclick="changeLanguage('ru')">Русский</button>
     
-    <h1 id="profile-title">Профиль сигма мейла Алмасулы Абылай 10С нагибатор тигр лев наш слоняра 3000 нео</h1>
-    <img src="Sukhoi_Design_Bureau,_054,_Sukhoi_Su-57_(49581303977).jpg" width="300"/>
+    <h1 id="profile-title">Profile of Sigma Male Almasuly Abilay</h1>
+    <img src="Sukhoi_Design_Bureau,_054,_Sukhoi_Su-57_(49581303977).jpg" width="400" />
     
-    <table>
+    <table border="1" align="center">
         <tr>
-            <th id="name-header">Имя</th>
-            <th id="age-header">Возраст</th>
-            <th id="email-header">Почта</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
         </tr>
         <tr>
-            <td id="name-value">Абылай лев тигр</td>
-            <td id="age-value">16</td>
-            <td id="email-value">batman@gmail.com</td>
+            <td>Abilay Lev Tiger</td>
+            <td>16</td>
+            <td>batman@gmail.com</td>
         </tr>
     </table>
     
     <ul>
-        <li id="trait-1">Сигмабой</li>
-        <li id="trait-2">Найман</li>
-        <li id="trait-3">топ1казахстана</li>
-        <li id="trait-4">получил 5 по английскому</li>
+        <li>Sigmaboy</li>
+        <li>Naiman</li>
+        <li>Top1Kazakhstan</li>
+        <li>Got 5 in English</li>
     </ul>
-
-    <script>
-        const translations = {
-            en: {
-                profileTitle: "Profile of sigma male Almasuly Abilay 10C nagibator tiger lion our sloniara 3000 neo",
-                nameHeader: "Name",
-                ageHeader: "Age",
-                emailHeader: "Email",
-                nameValue: "Abilay lev tiger",
-                ageValue: "16",
-                emailValue: "batman@gmail.com",
-                trait1: "Sigmaboy",
-                trait2: "Naiman",
-                trait3: "top1kazakhstana",
-                trait4: "got 5 in English"
-            },
-            ru: {
-                profileTitle: "Профиль сигма мэла Алмасулы Абылай 10С нагибатор тигр лев наш слоняра 3000 нео",
-                nameHeader: "Имя",
-                ageHeader: "Возраст",
-                emailHeader: "Почта",
-                nameValue: "Абылай лев тигр",
-                ageValue: "16",
-                emailValue: "batman@gmail.com",
-                trait1: "Сигмабой",
-                trait2: "Найман",
-                trait3: "топ1казахстана",
-                trait4: "получил 5 по английскому"
-            }
-        };
-
-        function changeLanguage(lang) {
-            document.getElementById("profile-title").innerText = translations[lang].profileTitle;
-            document.getElementById("name-header").innerText = translations[lang].nameHeader;
-            document.getElementById("age-header").innerText = translations[lang].ageHeader;
-            document.getElementById("email-header").innerText = translations[lang].emailHeader;
-            document.getElementById("name-value").innerText = translations[lang].nameValue;
-            document.getElementById("age-value").innerText = translations[lang].ageValue;
-            document.getElementById("email-value").innerText = translations[lang].emailValue;
-            document.getElementById("trait-1").innerText = translations[lang].trait1;
-            document.getElementById("trait-2").innerText = translations[lang].trait2;
-            document.getElementById("trait-3").innerText = translations[lang].trait3;
-            document.getElementById("trait-4").innerText = translations[lang].trait4;
-        }
-    </script>
+    
+    <a href="gallery.html" class="button" id="gallery-button">Go to Gallery</a>
 </body>
 </html>
